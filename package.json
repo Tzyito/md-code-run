@@ -1,24 +1,24 @@
 {
-  "publisher": "antfu",
-  "name": "ext-name",
-  "displayName": "ext-name",
+  "publisher": "tzyito",
+  "name": "md-code-run",
+  "displayName": "md-code-run",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@8.10.5",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Tzyiro <https://github.com/tzyito>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/ext-name#readme",
+  "funding": "https://github.com/sponsors/tzyito",
+  "homepage": "https://github.com/tzyito/md-code-run#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/ext-name"
+    "url": "https://github.com/tzyito/md-code-run"
   },
   "bugs": {
-    "url": "https://github.com/antfu/ext-name/issues"
+    "url": "https://github.com/tzyito/md-code-run/issues"
   },
   "sponsor": {
-    "url": "https://github.com/sponsors/antfu"
+    "url": "https://github.com/sponsors/tzyito"
   },
   "categories": [
     "Other"
