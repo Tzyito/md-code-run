@@ -2,7 +2,7 @@
   "publisher": "tzyito",
   "name": "vscode-markdown-codesandbox",
   "displayName": "vscode-markdown-codesandbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.10.5",
   "description": "run code in your markdown",
   "author": "Tzyiro <https://github.com/tzyito>",
