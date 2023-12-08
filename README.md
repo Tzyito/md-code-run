@@ -38,7 +38,7 @@ You can switch files and run code blocks at any time, and the plug-in will be up
   - [ ] python
     - [ ] run in a sandbox environment
   - [ ] golang
-    - [] run in a sandbox environment
+    - [ ] run in a sandbox environment
   - [ ] shell
 
 ## License
