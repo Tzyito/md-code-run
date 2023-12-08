@@ -23,9 +23,13 @@
     "Other"
   ],
   "main": "./dist/index.js",
-  "icon": "res/icon.png",
+  "icon": "public/icon.jpeg",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "markdown",
+    "vscode"
   ],
   "engines": {
     "vscode": "^1.83.0"
