@@ -19,6 +19,10 @@
   "sponsor": {
     "url": "https://github.com/sponsors/tzyito"
   },
+  "keywords": [
+    "markdown",
+    "vscode"
+  ],
   "categories": [
     "Other"
   ],
@@ -26,10 +30,6 @@
   "icon": "public/icon.jpeg",
   "files": [
     "dist"
-  ],
-  "keywords": [
-    "markdown",
-    "vscode"
   ],
   "engines": {
     "vscode": "^1.83.0"

@@ -1,6 +1,6 @@
 import type { ExtensionContext, Position, TextDocument, TextEditor } from 'vscode'
 import { Hover, MarkdownString, Uri, languages, window, workspace } from 'vscode'
-import { parseAST, type MdCode } from './parse'
+import { type MdCode, parseAST } from './parse'
 import { isInRangeBinarySearch } from './utils'
 
 export function ActiveMounted(context: ExtensionContext) {
