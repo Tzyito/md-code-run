@@ -1,19 +1,26 @@
-import { window, commands, Range, StatusBarAlignment } from 'vscode'
-import type { ExtensionContext, Position, TextDocument } from 'vscode'
-import { runCode } from './runner';
-import { registerCommandFn } from './commands';
-import { ActiveMounted, MouseHovered, TextChange } from './disposable';
+import type { ExtensionContext } from 'vscode'
+import { registerCommandFn } from './commands'
+import { ActiveMounted, MouseHovered, TextChange } from './disposable'
 
 export function activate(context: ExtensionContext) {
-  const commands = registerCommandFn()
+  const commands = registerCommandFn(context)
   const disposables = [
     ActiveMounted(context),
     MouseHovered(context),
-    TextChange()
+    TextChange(context),
   ]
-  context.subscriptions.push(...[...disposables, ...commands]);
+  context.subscriptions.push(...[...disposables, ...commands])
 }
 
 export function deactivate() {
+  // @TODO - Whether to clear the cache？
 
+  // for(let key of ctx.globalState.keys()) {
+  //   console.log('key', key)
+  //   if(key.startsWith('webview:')) {
+  //     const webView = ctx.globalState.get(key) as WebviewPanel;
+  //     webView.dispose()
+  //   }
+  //   ctx.globalState.update(key,undefined)
+  // }
 }
