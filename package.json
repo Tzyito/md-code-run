@@ -1,20 +1,20 @@
 {
   "publisher": "tzyito",
-  "name": "md-code-run",
-  "displayName": "md-code-run",
+  "name": "vscode-markdown-codesandbox",
+  "displayName": "vscode-markdown-codesandbox",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@8.10.5",
   "description": "",
   "author": "Tzyiro <https://github.com/tzyito>",
   "license": "MIT",
-  "homepage": "https://github.com/tzyito/md-code-run#readme",
+  "homepage": "https://github.com/tzyito/vscode-markdown-codesandbox#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tzyito/md-code-run"
+    "url": "https://github.com/tzyito/vscode-markdown-codesandbox"
   },
   "bugs": {
-    "url": "https://github.com/tzyito/md-code-run/issues"
+    "url": "https://github.com/tzyito/vscode-markdown-codesandbox/issues"
   },
   "sponsor": {
     "url": "https://github.com/sponsors/tzyito"
@@ -44,6 +44,9 @@
     "typecheck": "tsc --noEmit",
     "release": "bumpp && nr publish"
   },
+  "dependencies": {
+    "markdown-it": "^13.0.2"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^1.1.1",
     "@antfu/ni": "^0.21.9",
@@ -60,8 +63,5 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0",
     "vitest": "^0.34.6"
-  },
-  "dependencies": {
-    "markdown-it": "^13.0.2"
   }
 }
