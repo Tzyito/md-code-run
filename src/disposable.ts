@@ -23,7 +23,7 @@ export function MouseHovered(context: ExtensionContext) {
 
       const hoverText = new MarkdownString('**Run Code**')
       const command = Uri.parse(`command:extension.runCodeBlock?${JSON.stringify({ code: all_codes[index].content })}`)
-      hoverText.appendCodeblock(all_codes[index].content, 'javascript')
+      hoverText.appendCodeblock(all_codes[index].content, all_codes[index].language)
       hoverText.appendMarkdown(`[🤖 Run it](${command})`)
       hoverText.isTrusted = true
       return new Hover(hoverText)
