@@ -1,5 +1,5 @@
-
-const script = (initScript: string) => `
+function script(initScript: string) {
+  return `
 const vscode = acquireVsCodeApi();
 function closePanel() {
     vscode.postMessage({ command: 'close' });
@@ -40,7 +40,9 @@ try {
   generateLogDom(errorBox, error);
 }
 `
-export const html = (initScript: string) => `
+}
+export function html(initScript: string) {
+  return `
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,3 +66,4 @@ export const html = (initScript: string) => `
 </body>
 </html>
 `
+}

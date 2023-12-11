@@ -37,6 +37,8 @@
     "onStartupFinished"
   ],
   "scripts": {
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
     "lint": "eslint .",
@@ -76,8 +78,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   }
 }

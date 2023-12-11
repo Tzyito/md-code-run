@@ -12,7 +12,7 @@ export function runCode(context: ExtensionContext, code: string) {
       { enableScripts: true },
     )
     // 在 Webview 中显示运行结果
-    new_panel.webview.html = html(code);
+    new_panel.webview.html = html(code)
 
     // 添加关闭按钮
     new_panel.webview.onDidReceiveMessage((message) => {
