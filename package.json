@@ -3,6 +3,7 @@
   "name": "vscode-markdown-codesandbox",
   "displayName": "vscode-markdown-codesandbox",
   "version": "0.0.3",
+  "packageManager": "pnpm@8.10.5",
   "description": "run code in your markdown",
   "author": "tzyito <https://github.com/tzyito>",
   "license": "MIT",
@@ -36,7 +37,6 @@
     "onStartupFinished"
   ],
   "scripts": {
-    "prepare": "husky install",
     "lint-staged": "lint-staged",
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
@@ -69,11 +69,6 @@
     "typescript": "^5.3.3",
     "vite": "^4.5.1",
     "vitest": "^0.34.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [
