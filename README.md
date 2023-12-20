@@ -20,7 +20,7 @@ You can switch files and run code blocks at any time, and the plug-in will be up
 
 ## Run code in sandbox
 
-<img src="https://raw.githubusercontent.com/tzyito/vscode-markdown-codesandbox/main/public/feature_hover.gif">
+<img src="https://raw.githubusercontent.com/tzyito/vscode-markdown-codesandbox/main/public/feature_trigger.gif">
 
 > Only javascript is now supported!
 
