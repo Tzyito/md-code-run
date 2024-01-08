@@ -1,9 +1,5 @@
-function script(initScript: string) {
+export function script(initScript: string) {
   return `
-const vscode = acquireVsCodeApi();
-function closePanel() {
-    vscode.postMessage({ command: 'close' });
-}
 function generateLogDom(container, message, elementType = 'p') {
   // const stackInfo = new Error().stack.split("/n")[2].trim();
   // const reg = /(?:at file:\\/\\/\\/[^/]+\\/)([^:]+):(\d+:\d+)/;
@@ -39,31 +35,5 @@ try {
   vscode.postMessage({ command: 'error', message: error.message });
   generateLogDom(errorBox, error);
 }
-`
-}
-export function html(initScript: string) {
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body {
-            padding: 20px;
-        }
-        p {
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
-</head>
-<body>
-  <div id="result"></div>
-  <div id="error" style="color: red;"></div>
-  <button onclick="closePanel()">Close</button>
-  <script>
-      ${script(initScript)}
-  </script>
-</body>
-</html>
 `
 }

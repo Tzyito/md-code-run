@@ -1,7 +1,7 @@
 import type { MdCode } from './parse'
 
-export type SupportLanguage = ['javascript' | 'java']
-export const supportLanguageList: SupportLanguage = ['javascript']
+export type SupportLanguage = 'javascript' | 'java' | 'go' | 'python'
+export const supportLanguageList: SupportLanguage[] = ['javascript', 'go', 'python', 'java']
 
 export function supportLanguage(language: string) {
   return supportLanguageList.includes(language as string as any)

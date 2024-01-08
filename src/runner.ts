@@ -1,8 +1,8 @@
 import type { ExtensionContext } from 'vscode'
 import { ViewColumn, window } from 'vscode'
-import { html } from './template/javascript.tsx'
+import { html } from './template/index.tsx'
 
-export function runCode(context: ExtensionContext, code: string) {
+export function runCode(context: ExtensionContext, code: string, customHtml = false) {
   try {
     // 创建 Webview 面板
     const new_panel = window.createWebviewPanel(
@@ -12,7 +12,7 @@ export function runCode(context: ExtensionContext, code: string) {
       { enableScripts: true },
     )
     // 在 Webview 中显示运行结果
-    new_panel.webview.html = html(code)
+    new_panel.webview.html = customHtml ? code : html(code)
 
     // 添加关闭按钮
     new_panel.webview.onDidReceiveMessage((message) => {

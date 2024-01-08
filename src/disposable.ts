@@ -15,14 +15,14 @@ export function ActiveMounted(context: ExtensionContext) {
 }
 export function MouseHovered(context: ExtensionContext) {
   const disposable_hover = languages.registerHoverProvider({ scheme: 'file', language: 'markdown' }, {
-    provideHover(_: TextDocument, position: Position) {
+    async provideHover(_: TextDocument, position: Position) {
       const all_codes = context.globalState.get('all_codes') as MdCode[]
       const index = isInRangeBinarySearch(position.line, all_codes)
       if (index === -1)
         return undefined
 
       const hoverText = new MarkdownString('**Run Code**')
-      const command = Uri.parse(`command:extension.runCodeBlock?${JSON.stringify({ code: all_codes[index].content })}`)
+      const command = Uri.parse(`command:extension.runCodeBlock?${JSON.stringify({ languages: all_codes[index].language, index })}`)
       hoverText.appendCodeblock(all_codes[index].content, all_codes[index].language)
       hoverText.appendMarkdown(`[🤖 Run it](${command})`)
       hoverText.isTrusted = true
